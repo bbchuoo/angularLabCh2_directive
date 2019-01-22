@@ -1,0 +1,25 @@
+<h5>
+    屬性型指令</h5>
+<p>
+    第一種方法</p>
+<div>
+    <div [ngClass]="getClass()">測試</div>
+</div>
+<hr>
+<p>第二種方法</p>
+<div>
+    <div [ngClass]="{'first': !classFlag, 'second': classFlag, 'third': classFlag}">測試</div>
+    <button type="button" class="btn btn-primary" (click)="changeClass()">切換</button>
+</div>
+<hr/>
+<h5>結構型指令 *ngIf</h5>
+<button type="button" class="btn btn-primary" (click)="show = !show">click</button>
+<br>
+<div *ngIf="show">Text to show</div>
+<hr>
+<h5>結構型指令 *ngFor</h5>
+<ul>
+    <li *ngFor="let name of names">
+        {{ name }}
+    </li>
+</ul>
