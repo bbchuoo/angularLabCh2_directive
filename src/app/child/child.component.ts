@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  show: boolean = true;
-  classFlag: boolean = true;
-  names = ["Aarav", "Martín", "Shannon", "Ariana", "Kai"];
+  show = true;
+  classFlag = true;
+  username = true;
+  names = ['Aarav', 'Martín', 'Shannon', 'Ariana', 'Kai'];
   constructor() { }
 
   ngOnInit() {
@@ -18,11 +19,10 @@ export class ChildComponent implements OnInit {
     this.classFlag = !this.classFlag;
   }
 
-  getClass(){
-    if(this.classFlag){
+  getClass() {
+    if (this.classFlag) {
       return 'second';
-    }
-    else{
+    } else {
       return null;
     }
     // 這裡可以用程式動態決定要回傳字串、陣列或物件

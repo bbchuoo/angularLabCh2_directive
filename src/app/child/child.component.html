@@ -1,15 +1,25 @@
 <h5>
     屬性型指令</h5>
 <p>
-    第一種方法</p>
+    ngClass第一種方法</p>
 <div>
     <div [ngClass]="getClass()">測試</div>
 </div>
 <hr>
-<p>第二種方法</p>
+<p>ngClass第二種方法</p>
 <div>
     <div [ngClass]="{'first': !classFlag, 'second': classFlag, 'third': classFlag}">測試</div>
     <button type="button" class="btn btn-primary" (click)="changeClass()">切換</button>
+</div>
+<hr>
+<p>ngStyle第一種方法</p>
+<div>
+    <div [ngStyle]="{'background-color':'green'}">測試ngstyle</div>
+</div>
+<hr/>
+<p>ngStyle第二種方法</p>
+<div>
+    <div [ngStyle]="{'background-color':username ? 'green' : 'red' }">測試ngstyle</div>
 </div>
 <hr/>
 <h5>結構型指令 *ngIf</h5>
